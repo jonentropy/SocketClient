@@ -8,6 +8,8 @@ import org.junit.Test;
 
 import java.io.IOException;
 
+import junit.framework.Assert;
+
 import com.tal.socketclient.SocketClient;
 
 public class ClientTest {
@@ -40,7 +42,7 @@ public class ClientTest {
 			}
 
 			//Check that the server returned what we expect
-			assert(reply == "DATA="+i);
+			Assert.assertEquals("DATA="+i, reply);
 		}
 	}
 }
